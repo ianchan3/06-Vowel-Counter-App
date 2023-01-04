@@ -2,9 +2,7 @@ const word = document.querySelector(".input-text");
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".result");
 
-btn.addEventListener("click", countVowel);
-
-function countVowel() {
+btn.addEventListener("click", () => {
   let vowelCount = 0;
   let wordVal = word.value.toLowerCase();
   for (let i = 0; i < wordVal.length; i++) {
@@ -14,4 +12,4 @@ function countVowel() {
     }
   }
   result.innerHTML = `${word.value.toUpperCase()} has a Vowel Count of ${vowelCount}`;
-}
+});
